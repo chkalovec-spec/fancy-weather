@@ -1,3 +1,5 @@
 export type LineHeight = {
-  md: string
+  sm: string
+  lg: string
+  xl: string
 }

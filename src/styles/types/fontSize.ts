@@ -1,3 +1,5 @@
 export type FontSize = {
-  md: string
+  sm: string
+  lg: string
+  xl: string
 }

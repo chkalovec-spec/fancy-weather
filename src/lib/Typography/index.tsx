@@ -12,9 +12,11 @@ type TypographyProps = {
 const StyledP = styled.p<TypographyProps>`
   margin-right: ${({ mr }) => `${+mr! / 2}rem` || 0};
 
-  font-size: ${({ fz, theme: { fontSize } }) => fontSize[fz!] || fontSize.md};
+  display: inline-block;
+
+  font-size: ${({ fz, theme: { fontSize } }) => fontSize[fz!] || fontSize.sm};
   font-weight: ${({ fw, theme: { fontWeight } }) => fontWeight[fw!] || fontWeight['400']};
-  line-height: ${({ lh, theme: { lineHeight } }) => lineHeight[lh!] || lineHeight.md};
+  line-height: ${({ lh, theme: { lineHeight } }) => lineHeight[lh!] || lineHeight.sm};
 
   color: ${({ color, theme: { colors } }) => colors[color!] || colors.white};
 `

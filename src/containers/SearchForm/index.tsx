@@ -9,8 +9,8 @@ export const SearchFormContainer: React.FC = () => {
   return (
     <>
       <FormGroup>
-        <Input placeholder='Search city or ZIP' icon={micLogo} />
-        <Button>
+        <Input placeholder='Search city or ZIP' icon={micLogo} borderRight='0' />
+        <Button borderLeft='0'>
           <Typography fw='700'>Search</Typography>
         </Button>
       </FormGroup>

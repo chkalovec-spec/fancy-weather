@@ -11,7 +11,9 @@ export const theme: DefaultTheme = {
   },
 
   fontSize: {
-    md: '14px',
+    sm: '14px',
+    lg: '24px',
+    xl: '44px',
   },
   fontWeight: {
     '400': 400,
@@ -19,7 +21,9 @@ export const theme: DefaultTheme = {
   },
 
   lineHeight: {
-    md: '17px',
+    sm: '17px',
+    lg: '29px',
+    xl: '54px',
   },
 
   maxWidth: {

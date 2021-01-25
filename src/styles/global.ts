@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
+import bgImage from 'assets/bgImage.jpg'
 
-//TODO change bg + flex
 export const GlobalStyle = createGlobalStyle`
   * {
   margin: 0;
@@ -8,13 +8,11 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
+  font-size: 14px
   }
   body {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
-    /* background-color: #AEB5B9; */
-  }
-  #root {
-    display:flex;
+    background-image: url(${bgImage})
   }
 `

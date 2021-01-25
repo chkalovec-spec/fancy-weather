@@ -6,17 +6,38 @@ export const theme: DefaultTheme = {
     grayDark: '#4c525566',
     grayLight: '#b4b8bb66',
     white: '#ffffff',
+    whiteDark: '#ffffff66',
+    divider: '#e4e3e3',
   },
 
   fontSize: {
     md: '14px',
+  },
+  fontWeight: {
+    '400': 400,
+    '700': 700,
   },
 
   lineHeight: {
     md: '17px',
   },
 
-  containerWidth: {
-    lg: '1440px',
+  maxWidth: {
+    xl: '1140px',
+  },
+  size: {
+    md: {
+      padding: '1rem',
+      height: '45px',
+    },
+  },
+  position: {
+    relative: 'relative',
+    absolute: 'absolute',
+  },
+  flex: {
+    justify: {
+      between: 'space-between',
+    },
   },
 }

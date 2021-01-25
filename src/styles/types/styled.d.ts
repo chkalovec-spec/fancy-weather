@@ -1,21 +1,22 @@
 import 'styled-components'
+import { Colors } from './colors'
+import { FontSize } from './fontSize'
+import { FontWeight } from './fontWeight'
+import { Size } from './size'
+import { LineHeight } from './lineHeight'
+import { MaxWidth } from './maxWidth'
+import { Position } from './position'
+import { Flex } from './flex'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors: {
-      gray: string
-      grayDark: string
-      grayLight: string
-      white: string
-    }
-    fontSize: {
-      md: string
-    }
-    lineHeight: {
-      md: string
-    }
-    containerWidth: {
-      lg: string
-    }
+    colors: Colors
+    fontWeight: FontWeight
+    fontSize: FontSize
+    lineHeight: LineHeight
+    maxWidth: MaxWidth
+    size: Size
+    position: Position
+    flex: Flex
   }
 }

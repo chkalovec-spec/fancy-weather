@@ -1,2 +1,2 @@
-export const GEO_TOKEN = 'f39052ab6ff497'
-export const GEO_URL = `https://ipinfo.io/json?token=${GEO_TOKEN}`
+export const GEO_TOKEN = 'f8ee286167084d2a8c0cf174e9d6f50b'
+export const GEO_BASE_URL = `https://api.opencagedata.com/geocode/v1/json`

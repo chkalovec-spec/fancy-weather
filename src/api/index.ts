@@ -1,8 +1,16 @@
 import axios, { AxiosResponse } from 'axios'
-import { GEO_URL } from 'constants/api'
-import { fetchGeolocatonData } from 'types/api'
+import * as _ from 'lodash'
 
-export const fetchGeolocaton = async (): Promise<fetchGeolocatonData> => {
-  const { data }: AxiosResponse<fetchGeolocatonData> = await axios.get(GEO_URL)
-  return data
+import { GEO_BASE_URL, GEO_TOKEN } from 'constants/api'
+import { fetchGeolocatonData, GeolocationDataType } from 'types/api'
+
+export const fetchGeolocaton = async (
+  lat: number | null,
+  lon: number | null
+): Promise<GeolocationDataType> => {
+  const { data }: AxiosResponse<fetchGeolocatonData> = await axios.get(
+    `${GEO_BASE_URL}?q=${lat}%2C%20${lon}&key=${GEO_TOKEN}&language=en`
+  )
+
+  return _.head(data.results)?.components!
 }

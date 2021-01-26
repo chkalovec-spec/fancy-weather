@@ -1,11 +1,13 @@
-export type fetchGeolocatonData = {
-  city: string
+export type GeolocationDataType = {
   country: string
-  hostname: string
-  ip: string
-  loc: string
-  org: string
-  postal: string
-  region: string
-  timezone: string
+  town: string
+}
+
+export type fetchGeolocatonData = {
+  results: {
+    components: {
+      country: string
+      town: string
+    }
+  }[]
 }

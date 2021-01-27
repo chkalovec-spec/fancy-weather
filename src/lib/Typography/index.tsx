@@ -7,12 +7,15 @@ type TypographyProps = {
   lh?: keyof typeof theme.lineHeight
   color?: keyof typeof theme.colors
   mr?: string
+  display?: keyof typeof theme.display
 }
 
 const StyledP = styled.p<TypographyProps>`
-  margin-right: ${({ mr }) => `${+mr! / 2}rem` || 0};
+  padding: 0.2rem;
+  margin-right: ${({ mr }) => (mr ? `${+mr! / 2}rem` : 0)};
 
-  display: inline-block;
+  display: ${({ display, theme: { display: displayTheme } }) =>
+    displayTheme[display!] || displayTheme.inlineBlock};
 
   font-size: ${({ fz, theme: { fontSize } }) => fontSize[fz!] || fontSize.sm};
   font-weight: ${({ fw, theme: { fontWeight } }) => fontWeight[fw!] || fontWeight['400']};

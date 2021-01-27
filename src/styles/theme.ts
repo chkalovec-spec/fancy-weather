@@ -14,6 +14,7 @@ export const theme: DefaultTheme = {
     sm: '14px',
     lg: '24px',
     xl: '44px',
+    xxl: '306px',
   },
   fontWeight: {
     '400': 400,
@@ -24,6 +25,7 @@ export const theme: DefaultTheme = {
     sm: '17px',
     lg: '29px',
     xl: '54px',
+    xxl: '373px',
   },
 
   maxWidth: {
@@ -43,5 +45,12 @@ export const theme: DefaultTheme = {
     justify: {
       between: 'space-between',
     },
+    direction: {
+      column: 'column',
+    },
+  },
+  display: {
+    block: 'block',
+    inlineBlock: 'inline-block',
   },
 }

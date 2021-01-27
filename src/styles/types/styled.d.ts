@@ -7,6 +7,7 @@ import { LineHeight } from './lineHeight'
 import { MaxWidth } from './maxWidth'
 import { Position } from './position'
 import { Flex } from './flex'
+import { Display } from './display'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -18,5 +19,6 @@ declare module 'styled-components' {
     size: Size
     position: Position
     flex: Flex
+    display: Display
   }
 }

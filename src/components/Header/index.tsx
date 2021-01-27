@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
     <>
       <StyledHeader>
         <Flex justify='between'>
-          <ButtonGroup width='215'>
+          <ButtonGroup width='225'>
             <RefreshContainer />
             <LangContainer />
             <TempContainer />

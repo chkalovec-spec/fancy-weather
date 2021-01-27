@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useGeolocation } from 'react-use'
 import { format } from 'date-fns'
 
@@ -7,6 +7,8 @@ import { fetchGeolocaton } from 'api'
 import { DATE_MASK, TIME_MASK } from 'constants/masks'
 import { TitleBlock } from 'components/TitleBlock'
 import { Wrapper } from 'components/Wrapper'
+import { AppContext } from 'context'
+import { setCoords } from 'context/action'
 
 export const TitleBlockContainer: React.FC = () => {
   const { latitude, longitude } = useGeolocation()
@@ -16,6 +18,8 @@ export const TitleBlockContainer: React.FC = () => {
   const [geoDate, setGeoDate] = useState<string>('')
   const [geoTime, setGeoTime] = useState<string>('')
 
+  const { dispatch } = useContext(AppContext)
+
   //TODO remove comment
   useEffect(() => {
     const getGeolocation = async () => {
@@ -23,10 +27,11 @@ export const TitleBlockContainer: React.FC = () => {
         // const { town, country } = await fetchGeolocaton(latitude, longitude)
         // setGeoCity(town)
         // setGeoCountry(country)
+        dispatch(setCoords({ latitude, longitude }))
       }
     }
     getGeolocation()
-  }, [latitude, longitude])
+  }, [latitude, longitude, dispatch])
 
   useEffect(() => {
     setGeoDate(format(new Date(), DATE_MASK))

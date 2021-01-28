@@ -17,6 +17,8 @@ const StyledP = styled.p<TypographyProps>`
   display: ${({ display, theme: { display: displayTheme } }) =>
     displayTheme[display!] || displayTheme.inlineBlock};
 
+  position: relative;
+
   font-size: ${({ fz, theme: { fontSize } }) => fontSize[fz!] || fontSize.sm};
   font-weight: ${({ fw, theme: { fontWeight } }) => fontWeight[fw!] || fontWeight['400']};
   line-height: ${({ lh, theme: { lineHeight } }) => lineHeight[lh!] || lineHeight.sm};

@@ -1,6 +1,8 @@
-import { useReducer } from 'react'
+import { useEffect, useReducer } from 'react'
+import { useGeolocation } from 'react-use'
 
 import { appReducer, appState } from 'context/reducer'
+import { setCoords } from 'context/action'
 import { AppContext } from 'context'
 
 import { WeatherBlockContainer } from 'containers/WeatherBlock'
@@ -10,6 +12,11 @@ import { Container } from 'lib/Container'
 
 function App() {
   const [state, dispatch] = useReducer(appReducer, appState)
+  const { latitude, longitude } = useGeolocation()
+
+  useEffect(() => {
+    dispatch(setCoords({ latitude, longitude }))
+  }, [latitude, longitude])
 
   return (
     <>
